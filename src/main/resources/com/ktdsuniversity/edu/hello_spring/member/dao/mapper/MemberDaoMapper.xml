@@ -68,4 +68,10 @@
      		 , LATEST_LOGIN_SUCCESS_DATE = SYSDATE
  		 WHERE EMAIL = #{email}
 	</update>
+	
+	<delete id="deleteMe" parameterType="string">
+		DELETE
+  		  FROM MEMBERS
+ 		 WHERE EMAIL = #{email}
+	</delete>
 </mapper>

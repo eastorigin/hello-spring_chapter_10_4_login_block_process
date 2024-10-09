@@ -10,8 +10,7 @@ pageEncoding="UTF-8"%> <%@ taglib prefix="c" uri="jakarta.tags.core" %>
     <div class="right-align">
       <ul class="horizontal-list">
         <c:choose>
-          <c:when test="${empty sessionScope._LOGIN_USER_}"
-            >\
+          <c:when test="${empty sessionScope._LOGIN_USER}">
             <li>
               <a href="/member/regist">회원가입</a>
             </li>
@@ -25,8 +24,8 @@ pageEncoding="UTF-8"%> <%@ taglib prefix="c" uri="jakarta.tags.core" %>
           </c:when>
           <c:otherwise>
             <li>
-              ${sessionScope._LOGIN_USER_.name}
-              (${sessionScope._LOGIN_USER_.email})
+              ${sessionScope._LOGIN_USER.name}
+              (${sessionScope._LOGIN_USER.email})
             </li>
             <li>
               <a href="/member/logout">로그아웃</a>

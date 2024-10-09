@@ -48,3 +48,16 @@ textarea {
 .unusable {
   background-color: #f008;
 }
+
+ul.horizontal-list {
+  padding: 0px;
+  margin: 0px;
+}
+
+ul.horizontal-list li {
+  display: inline;
+}
+
+.membermenu {
+  text-align: right;
+}

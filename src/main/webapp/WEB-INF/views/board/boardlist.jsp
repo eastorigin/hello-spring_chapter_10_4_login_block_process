@@ -10,7 +10,7 @@ pageEncoding="UTF-8"%>
     <link rel="stylesheet" type="text/css" href="/css/common.css" />
   </head>
   <body>
-    <div class="grid">
+    <div>
       <div class="membermenu">
         <jsp:include page="../member/membermenu.jsp"></jsp:include>
       </div>
@@ -64,7 +64,7 @@ pageEncoding="UTF-8"%>
           </c:choose>
         </tbody>
       </table>
-      <c:if test="${not empty sessionScope._LOGIN_USER_}">
+      <c:if test="${not empty sessionScope._LOGIN_USER}">
         <div class="right-align">
           <a href="/board/write">게시글 등록</a>
         </div>

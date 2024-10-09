@@ -112,6 +112,7 @@ public class MemberController {
 		return "redirect:/member/success-delete-me";
 	}
 	
+	@GetMapping("/member/{result}-delete-me")
 	public String viewDeleteMyPage(@PathVariable String result) {
 		result = result.toLowerCase();
 		if(!result.equals("fail") && !result.equals("success")) {

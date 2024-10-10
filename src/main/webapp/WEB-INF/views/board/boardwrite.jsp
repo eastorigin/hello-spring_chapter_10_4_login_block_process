@@ -9,6 +9,9 @@ uri="http://www.springframework.org/tags/form"%>
     <link rel="stylesheet" type="text/css" href="/css/common.css" />
   </head>
   <body>
+    <div class="membermenu">
+      <jsp:include page="../member/membermenu.jsp"></jsp:include>
+    </div>
     <h1>게시글 작성</h1>
     <form:form
       modelAttribute="writeBoardVO"

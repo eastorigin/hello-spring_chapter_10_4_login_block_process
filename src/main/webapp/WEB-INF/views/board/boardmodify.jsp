@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+pageEncoding="UTF-8"%> <%@ taglib prefix="form"
+uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,6 +9,9 @@ pageEncoding="UTF-8"%>
     <link rel="stylesheet" type="text/css" href="/css/common.css" />
   </head>
   <body>
+    <div class="membermenu">
+      <jsp:include page="../member/membermenu.jsp"></jsp:include>
+    </div>
     <h1>게시글 수정</h1>
     <form:form
       modelAttribute="modifyBoardVO"
@@ -19,18 +22,23 @@ pageEncoding="UTF-8"%>
       <div class="grid">
         <label for="subject">제목</label>
         <div>
-        	<form:errors path="subject" element="div" cssClass="error" />
-        	<input
-          		id="subject"
-          		type="text"
-          		name="subject"
-         		 value="${boardVO.subject}"
-        	/>
+          <form:errors path="subject" element="div" cssClass="error" />
+          <input
+            id="subject"
+            type="text"
+            name="subject"
+            value="${boardVO.subject}"
+          />
         </div>
         <label for="email">이메일</label>
         <div>
-        	<form:errors path="email" element="div" cssClass="error" />
-        	<input id="email" type="email" name="email" value="${boardVO.email}" />
+          <form:errors path="email" element="div" cssClass="error" />
+          <input
+            id="email"
+            type="email"
+            name="email"
+            value="${boardVO.email}"
+          />
         </div>
         <label for="file">첨부파일</label>
         <input type="file" id="file" name="file" />
